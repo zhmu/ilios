@@ -1,0 +1,7 @@
+ILIOS Layout
+------------
+
+- Single tasking, Ring 0 application
+- Drivers part of the kernel
+- Packets handeled immediately when the NIC signals them
+- Packets buffers are re-cycled as much as possible for speed

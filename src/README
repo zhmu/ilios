@@ -1,0 +1,28 @@
+This is the full source code to ILIOS; dubbed the InterLink Internet Operating
+System. It is a standalone OS, which supports high-speed IPv4 routing.
+
+Only a handful of NIC's are supported (all ported from OpenBSD):
+
+- RealTek 8139
+- NE2000 clones
+- 3Com EtherLink III
+
+The code is a good learning base for netwerk operating system programming. The
+buffer implementation is a bit crude, as it was designed to perform well
+on even the worst network cards (hence no complex links within the structure,
+such as what *BSD's mbufs do).
+
+This code is BSD licensed, so have great joy with it. The reason I quit with
+the project was mostly due to the lack of time and being a bit disappointed
+with the performance (it could only beat NetBSD by a faction, if using a
+RealTek ... whereas NetBSD usually had to do much memcpy 's and the likes to
+properly allign the buffer)
+
+It builds on a FreeBSD 5.4 box, and runs fine using Bochs. Bochs' NE2000
+card gets successfully probed, but I was unable to do futher testing. Should
+something be broken, feel free to provide patches :)
+
+Regards,
+Rink Springer
+rink@rink.nu
+9 Oct 2005

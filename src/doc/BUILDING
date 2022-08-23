@@ -1,0 +1,23 @@
+Building ILIOS
+--------------
+
+Before you can build ILIOS, you must first create a symlink to the appropriate
+architecture directory:
+
+$ cd src
+$ ln -s arch/i386 md
+$ cd include
+$ ln -s arch/i386 md
+
+You can then build ILIOS/i386.
+
+Creating a bootable floppy
+--------------------------
+
+ILIOS uses GRUB to boot, so you must have that installed before you can build
+the image. When it is present, you can simply use the tools/build-grub.sh
+script to generate a bootable image.
+
+When in the src/ directory, you can use 'make copy' to copy the build kernel
+image to the floppy disk. You need mtools for this to work. Only a properly
+generated floppy using tools/build-grub.sh will work.
